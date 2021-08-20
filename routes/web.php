@@ -15,9 +15,11 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', 'UserController@login')->name('login');
+
+Route::post('/authenticate', 'UserController@authenticate')->name('auth');
+
+Route::get('/logout', 'UserController@logout')->name('bye');
 
 Route::get('/register', function () {
     return view('register');
@@ -39,8 +41,11 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/homeaccount', function () {
+Route::group(['middleware'=>['auth']], function(){
+
+    Route::get('/homeaccount', function () {
     return view('homeaccount');
+    });
 });
 
 Route::get('/product', function () {
@@ -50,4 +55,3 @@ Route::get('/product', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
-

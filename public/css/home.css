@@ -1,8 +1,18 @@
-@media (max-width: 576px) { 
-    .search-location {
-        width: auto;
+@media (min-width: 768px) {
+    .card-course:hover {
+      transition: transform .5s;
+      -ms-transform: scale(.2);
+      transform: scale(1.1);
     }
- }
+  }
+  @media (max-width: 576px) {
+    .card-course:hover {
+      transition: none;
+      -ms-transform: none;
+      transform: none;
+    }
+  }
+
 /* dark navbar */
 #user-photo {
     width: 27px;
@@ -99,8 +109,14 @@
 .card-course{
     padding: 0;
     border-radius: 20px;
-    color: #27332C;
+    color: #27332C; 
+    /* transition: transform .3s;  */
 }
+
+/* .card-course:hover{
+    -ms-transform: scale(.5);
+    transform: scale(1.1); 
+} */
 
 
 #card-time {

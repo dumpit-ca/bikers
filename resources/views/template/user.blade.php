@@ -77,7 +77,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link fw-bold text-light" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/images/girl.png" class="user-photo" alt="user's photo"> Shopper's Name</a>
+                            <img src="/images/girl.png" class="user-photo" alt="user's photo">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
                                 <a class="dropdown-item" href="{{url('profile')}}">
@@ -92,7 +92,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{{url('')}}">
+                                <a class="dropdown-item" href="{{route('bye')}}">
                                 <i class="fw-bold me-1 bi bi-box-arrow-right"></i>
                                 Logout
                                 </a>

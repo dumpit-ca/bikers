@@ -14,12 +14,19 @@
     #btn-rent {
        margin-top: 2rem!important;
     }
+    #location {
+        margin-top: 10px;
+    }
   }
 
-  #btn-rent a {
-      color: #ffffff;
-
-  }
+  @media (max-width: 576px) { 
+    .search-location {
+        width: auto;
+    }
+    #location {
+        margin-top: 10px;
+    }
+ }
 </style>
 
 <nav class="navbar navbar-expand-lg bg-light lightnav">
@@ -28,10 +35,10 @@
             <img class="img-fluid" src="/images/navbarlogo.svg" id="white-logo">
         </div>
         <form class="row input-group search-location">
-            <div class="col-lg-6 col-md-7 col-12">
+            <div class="col-lg-6 col-12">
                 <input type="search" class="form-control fw-bold" placeholder="Search for an item" id="search-bar">
             </div>
-                <div class="col-lg-3 col-md-7" id="location">
+                <div class="col-lg-3 col-12" id="location">
                     <div class="input-group">
                         <input type="text" class="location-bar form-control fw-bold" placeholder="All locations">
                         <span class="input-group-text" id="basic-addon1">
